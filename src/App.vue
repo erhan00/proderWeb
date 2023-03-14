@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <div class="row mt-1" style="background-color:#3F979B">
+    <div class="row mt-1" style="background-color:#006778">
       <div class="col-sm-5"><img class="mb-4 mt-2" src="./assets/proderlogo.gif" style="width: 50%;height: 58px;"></div>
       <div class="col-sm-1"></div>
       <div class="col-sm-6">

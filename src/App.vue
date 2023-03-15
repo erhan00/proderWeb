@@ -5,10 +5,11 @@
       <div class="col-sm-1"></div>
       <div class="col-sm-6">
           <div class="row">
-            <div class="col-sm-4">
-              <router-link to=""><img src="./assets/9040489_globe_icon.png" class="mx-2 mt-2" style="width: 35px;height: 27px;"></router-link>
-              <router-link to=""><img src="./assets/4691507_gmail_icon.png" class="mx-2 mt-2" style="width: 35px;height: 30px;"></router-link>
-              <router-link to=""><img src="./assets/211904_social_github_icon.png" class="mx-2 mt-2" style="width: 36px;height: 31px;"></router-link>
+            <div class="col-sm-4 mx-3" style="border-style:inset;border-color:#3C6255; border-radius: 25px;">
+              <router-link to=""><img src="./assets/9040489_globe_icon.png" class="mx-2 mt-1" style="width: 30px;height: 27px;"></router-link>
+              <router-link to=""><img src="./assets/4691507_gmail_icon.png" class="mx-2 mt-1" style="width: 30px;height: 30px;"></router-link>
+              <router-link to=""><img src="./assets/211904_social_github_icon.png" class="mx-2 mt-1" style="width: 30px;height: 31px;"></router-link>
+               
             </div>
             <div class="col-sm-6">
 
@@ -17,9 +18,10 @@
 
             </div>
           </div>
-        
-       
     </div>
+    
+
+    
   <!--
     <nav>
      <router-link to="/">Home</router-link> |
@@ -28,6 +30,7 @@
   -->
   <router-view/>
   <anasayfa/>
+  <!--<input type="text" ref="metin2"> -->
   <foterr/>
 </div>
 
@@ -42,6 +45,25 @@
     components :{
       anasayfa,
       foterr
+    },
+    data(){
+      return{
+        yazi:"erhan kalkan",
+        yazı01:"kalkan69",
+        sonuc:" ",
+        sonuc02:0
+      }
+    },
+    methods:{
+       tıkla(){
+         this.sonuc = this.$refs.metin.value;
+       },
+       SİL(){
+        this.$refs.metin2.value='';
+       },
+       gelen(sonucc){
+        this.sonuc02 =sonucc
+       }
     }
    }
 </script>

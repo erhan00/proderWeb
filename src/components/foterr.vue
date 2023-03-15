@@ -25,12 +25,14 @@
         </ul>
 
         <ul class="col-sm-3 mt-5" style="list-style: none;"><strong class="text-danger"> <h3> Hizmetlerimiz</h3></strong>
-        </ul>
 
+        </ul>
         <ul class="col-sm-3 mt-5" style="list-style: none;"><strong class="text-danger"> <h3> Çözümler</h3></strong>
         </ul>
 
         <ul class="col-sm-3 mt-5" style="list-style: none;"><strong class="text-danger"> <h3> Blog</h3></strong>
+
+          
         </ul>
 
         

@@ -3,7 +3,7 @@
      <!--#1797a6-->
     <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#F0DBDB;">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="../assets/logox.png"></a>
+    <a class="navbar-brand mx-5" href="#"><img src="../assets/logox.png"></a>
     
 
 
@@ -11,7 +11,7 @@
       <ul class="navbar-nav">
 
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"> <strong>Kurumsal</strong></button>
+          <button class="nav-link dropdown-toggle btn mx-2 text-dark" style="border-style: inset;border-color:black" href="#" role="button" data-bs-toggle="dropdown"> <strong>Kurumsal</strong></button>
           <ul class="dropdown-menu">
             <li><router-link to="" class="dropdown-item">Link</router-link></li>
             <li><router-link to="" class="dropdown-item">Another link</router-link></li>
@@ -20,7 +20,7 @@
         </li>
 
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Ürünlerimiz</strong></button>
+          <button class="nav-link dropdown-toggle btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Ürünlerimiz</strong></button>
           <ul class="dropdown-menu">
             <li><router-link to="" class="dropdown-item">Link</router-link></li>
             <li><router-link to="" class="dropdown-item">Another link</router-link></li>
@@ -30,7 +30,7 @@
 
 
         <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Bayilik</strong></button>
+          <button class="nav-link dropdown-toggle btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Bayilik</strong></button>
           <ul class="dropdown-menu">
             <li><router-link to="" class="dropdown-item">Link</router-link></li>
             <li><router-link to="" class="dropdown-item">Another link</router-link></li>
@@ -38,36 +38,40 @@
           </ul>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Kampanyalar</strong></button>
+          <button class="nav-link btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Kampanyalar</strong></button>
         </li>
         <li class="nav-item">
-          <button class="nav-link btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Dropdown</strong></button>
-        </li>
-
-        <li class="nav-item dropdown">
-          <button class="nav-link dropdown-toggle btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Referanslar</strong></button>
-          <ul class="dropdown-menu">
-            <li><router-link to="" class="dropdown-item">Link</router-link></li>
-            <li><router-link to="" class="dropdown-item">Another link</router-link></li>
-            <li><router-link to="" class="dropdown-item">A third link</router-link></li>
-          </ul>
+          <button class="nav-link btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Dropdown</strong></button>
         </li>
 
         <li class="nav-item">
-          <button class="nav-link btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Destek</strong></button>
+          <button class="nav-link btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Referanslar</strong></button>
         </li>  
 
+
         <li class="nav-item">
-          <button class="nav-link btn mx-3 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> İletişim</strong></button>
+          <button class="nav-link btn mx-2 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Destek</strong></button>
         </li>  
 
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn mx-2 text-dark" style="border-style: inset;border-color:black" href="#" role="button" data-bs-toggle="dropdown"><strong> İletişim</strong></button>
+          <ul class="dropdown-menu">
+            <li><router-link to="" class="dropdown-item">Link</router-link></li>
+            <li><router-link to="" class="dropdown-item">Another link</router-link></li>
+            <li><router-link to="" class="dropdown-item">A third link</router-link></li>
+          </ul>
+        </li>
+
+
+        
         
       </ul>
     </div>
 
 
-    <button class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-        <span class="navbar-toggler-icon bg-secondary"></span>
+    <button style="border-radius: 7px;" class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon bg-danger"></span>
     </button>
 
 
@@ -128,15 +132,14 @@
 </button>
 </div>
 
-
-
-  </div>
-
-  
-   
-  
-  
-
+<!--
+  <button @click="DENE">DENEE</button>
+<br>
+<input type="text" v-model="sayı1">
+<input type="text" v-model="sayı2">
+ <button @click="topla">topla uste gonder</button>
+ -->
+</div>
 
 
 
@@ -145,7 +148,23 @@
 <script>
 
 export default {
- name: 'anasayfa'
+ name: 'anasayfa',
+ props:['gonder'],
+ data(){
+   return{
+      sayı1:0,
+      sayı2:0
+   }
+ },
+ methods:{
+   DENE(){
+    this.$emit('DENE')
+   },
+   topla(){
+    let sonucc = +this.sayı1+ +this.sayı2
+    this.$emit('toplamSonucu','topla')
+   }
+ }
 }
 </script>
 

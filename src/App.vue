@@ -18,18 +18,83 @@
 
             </div>
           </div>
-    </div>
+    </div><!--***-->
+    <nav class="navbar navbar-expand-sm navbar-dark" style="background-color:#F0DBDB;">
+  <div class="container-fluid">
+    <a class="navbar-brand mx-5" href="#"><img src="./assets/logox.png" style="margin-right: 45px;"></a>
     
+    <div class="collapse navbar-collapse mx-5" id="collapsibleNavbar">
+      <ul class="navbar-nav">
 
-    
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"> <strong>Kurumsal</strong></button>
+          <ul class="dropdown-menu">
+            <li><router-link to="/" class="dropdown-item">Link</router-link></li>
+            <li><router-link to="" class="dropdown-item">Another link</router-link></li>
+            <li><router-link to="" class="dropdown-item">A third link</router-link></li>
+          </ul>
+        </li>
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Ürünlerimiz</strong></button>
+          <ul class="dropdown-menu">
+            <li><router-link to="" class="dropdown-item">Link</router-link></li>
+            <li><router-link to="" class="dropdown-item">Another link</router-link></li>
+            <li><router-link to="" class="dropdown-item">A third link</router-link></li>
+          </ul>
+        </li>
+
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> Bayilik</strong></button>
+          <ul class="dropdown-menu">
+            <li><router-link to="" class="dropdown-item">Link</router-link></li>
+            <li><router-link to="" class="dropdown-item">Another link</router-link></li>
+            <li><router-link to="" class="dropdown-item">A third link</router-link></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Kampanyalar</strong></button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Dropdown</strong></button>
+        </li>
+
+        <li class="nav-item">
+          <button class="nav-link btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Referanslar</strong></button>
+        </li>  
+
+        <li class="nav-item">
+          <button class="nav-link btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#"><strong> Destek</strong></button>
+        </li>  
+
+        <li class="nav-item dropdown">
+          <button class="nav-link dropdown-toggle btn mx-1 text-dark" style="border-style: inset;border-color:brown" href="#" role="button" data-bs-toggle="dropdown"><strong> İletişim</strong></button>
+          <ul class="dropdown-menu">
+            <li><router-link to="/iletişim" class="dropdown-item">Link</router-link></li>
+            <li><router-link to="/iletişim" class="dropdown-item">Another link</router-link></li>
+            <li><router-link to="/iletişim" class="dropdown-item">A third link</router-link></li>
+          </ul>
+        </li>
+        
+      </ul>
+    </div>
+
+    <button style="border-radius: 7px;" class="navbar-toggle" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+        <span class="navbar-toggler-icon bg-secondary"></span>
+    </button>
+
+
+  </div>
+</nav>
+
   <!--
     <nav>
      <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>
-  -->
-  <router-view/>
-  <anasayfa/>
+  --><anasayfa/>
+  <router-view/> 
   <!--<input type="text" ref="metin2"> -->
   <foterr/>
 </div>
@@ -37,13 +102,10 @@
 </template>
   
  <script>
-   import anasayfa from './components/anasayfa.vue'
    import foterr from './components/foterr.vue'
-
    export default {
     name: 'App',
     components :{
-      anasayfa,
       foterr
     },
     data(){
@@ -76,5 +138,4 @@
   text-align: center;
   color: #2c3e50;
 }
-
 </style>
